@@ -26,7 +26,7 @@ Shader "New Amplify Shader"
 
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
-			float2 temp_cast_0 = (1.0).xx;
+			float2 temp_cast_0 = (0.1).xx;
 			float2 panner3 = ( 1.0 * _Time.y * temp_cast_0 + i.uv_texcoord);
 			o.Albedo = ( tex2D( _water2, panner3 ) + float4( 0,0,0,0 ) ).rgb;
 			o.Alpha = 1;
@@ -39,9 +39,9 @@ Shader "New Amplify Shader"
 }
 /*ASEBEGIN
 Version=18000
-6;213;1920;333;-247.1451;-21.03464;1.053308;True;False
+0;463;1906;319;399.2042;56.30098;1.644777;True;False
 Node;AmplifyShaderEditor.TextureCoordinatesNode;4;452.3732,3.339788;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;5;521.2487,149.4892;Inherit;False;Constant;_Float0;Float 0;2;0;Create;True;0;0;False;0;1;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;5;521.2487,149.4892;Inherit;False;Constant;_Float0;Float 0;2;0;Create;True;0;0;False;0;0.1;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.PannerNode;3;768.3464,76.50624;Inherit;False;3;0;FLOAT2;0,0;False;2;FLOAT2;0,0;False;1;FLOAT;1;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.SamplerNode;9;1037.798,146.4484;Inherit;True;Property;_water2;water2;0;0;Create;True;0;0;False;0;-1;f56b219ca8f3f674a8830f44f093f617;f56b219ca8f3f674a8830f44f093f617;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;7;570.4113,390.3174;Inherit;False;Constant;_Float1;Float 1;2;0;Create;True;0;0;False;0;-1;0;0;0;0;1;FLOAT;0
@@ -56,4 +56,4 @@ WireConnection;6;2;7;0
 WireConnection;8;0;9;0
 WireConnection;0;0;8;0
 ASEEND*/
-//CHKSM=97E301DF071135B6183A870BFA9548359852F96F
+//CHKSM=B42E504185FCFC34A8BBD0A823C36B1E1903C7AD
